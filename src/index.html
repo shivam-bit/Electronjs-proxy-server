@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Proxy Server</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h2 class='window-header' style="text-align: center;">
+      🏁 Initializing Your Proxy Server ...
+    </h2>
+    <script charset="UTF-8">
+      const { ipcRenderer } = require('electron');
+      const windowHeader = document.querySelector('.window-header');
+      let port  = 0 ;
+      ipcRenderer.on('receive-port-number', (event, arg) => {
+      port=arg;
+      })
+      ipcRenderer.on('proxy-server-status', (event, arg) => {
+        let message;
+        if(arg==200){
+          message= `🚀 Your proxy server is running 🏃‍♂️ at port: ${port}`;
+        }else{
+          message= '🤷‍♂️ Something went wrong! Proxy server💻 couldnt be started😔';
+        }
+      windowHeader.innerText = message;
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins@1&display=swap'); */
+
+body {
+  background-color: #1F1D2B;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: #FFF;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal {
+  background-color: #252836;
+  min-width: 80%;
+  min-height: 80%;
+  border-radius: 20px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 25px 30px; 
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center;
+}
+
+.request-count {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-radius: 10px;
+  border: 1px solid #61D598;
+  min-width: 80%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.request-method {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border-radius: 10px;
+  border: 1px solid #0660F6;
+  min-width: 80%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.request-host {
+  grid-column: 1/3;
+  border-radius: 10px;
+  border: 1px solid #F39548;
+  min-width: 80%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.request-referrer {
+  grid-column: 1/3;
+  border-radius: 10px;
+  border: 1px solid #ED535C;
+  min-width: 80%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.request-count-data-box,
+.request-method-data-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 36px;
+}
+
+#request-count-data,
+#request-method-data {
+  margin: 5px;
+}
+
+.request-host-data-box,
+.request-referrer-data-box {
+  margin: 8px;
+  font-size: 24px;
+  max-width: 30ch;
+  overflow: hidden; /* make sure it hides the content that overflows */
+  white-space: nowrap; /* don't break the line */
+  text-overflow: ellipsis;
+}
